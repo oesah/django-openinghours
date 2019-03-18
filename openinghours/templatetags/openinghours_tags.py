@@ -172,7 +172,7 @@ def opening_hours(location=None, concise=False):
 
     template = get_template(template_name)
     ctx = {'days': days}
-    if print(django.get_version()) < 1.11:
+    if django.get_version() < 1.11:
         from django.template import Context
         ctx = Context({'days': days})
     return template.render(ctx)
